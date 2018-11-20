@@ -1,0 +1,399 @@
+\documentclass[11pt]{article}
+\renewcommand{\baselinestretch}{1.05}
+\usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx}
+\usepackage{graphics}
+\topmargin0.0cm
+\headheight0.0cm
+\headsep0.0cm
+\oddsidemargin0.0cm
+\textheight23.0cm
+\textwidth16.5cm
+\footskip1.0cm
+
+\begin{document}
+
+\title{Assignment 3 Solution}
+\author{Rochan Avlur Venkat}
+\maketitle
+
+\section{}
+Given that $$f(x,y) = \frac{x^{2}y^{2}}{x^{2}y^{2} + (x-y)^{2}}$$
+
+whenever $x^{2}y^{2} + (x - y)^{2} \neq 0$. Now, applying the first limit, we get
+
+$$\lim_{y\to0}f = \frac{x^{2}y^{2}}{x^{2}y^{2} + (x-y)^{2}} = \frac{0}{0 + (x)^{2}} = 0$$
+
+Now, applying the outer limit we get
+
+$$\lim_{x\to0}\lim_{y\to0}f = 0$$
+
+Similarly, we get
+
+$$\lim_{x\to0}f = \frac{x^{2}y^{2}}{x^{2}y^{2} + (x-y)^{2}} = \frac{0}{0 + (y)^{2}} = 0$$
+
+And applying the outer limit we get
+
+$$\lim_{y\to0}\lim_{x\to0}f = 0$$
+
+Hence, $$\lim_{y\to0}\lim_{x\to0}f = \lim_{x\to0}\lim_{y\to0}f$$
+
+Now, $\lim_{(x,y)\to(0,0)}f(x,y)$ along the $y=x$ line, we get
+
+$$\lim_{(x,y)\to(0,0)}f = \frac{x^{4}}{x^{4}} = 1$$
+
+Similarly, $\lim_{(x,y)\to(0,0)}f(x,y)$ along the $y=2x$ line, we get
+
+$$\lim_{(x,y)\to(0,0)}f = \frac{4x^{4}}{4x^{4} + x^{2}} = \frac{4x^{2}}{4x^{2} + 1} = 0$$
+
+Hence, limit does not exits at $(x,y) \to (0,0)$.
+
+\section{}
+
+See appended section.
+
+\section{}
+Given that $$f(x,y) = \frac{x^{2} - y^{2}}{x^{2} + y^{2}}$$
+\\
+We need to find the limit along $y = mx$ as $(x,y) \rightarrow (0,0)$
+\\
+\\
+Replacing the value of $y$ with $mx$ in the given function, we get $$f = \frac{x^{2} - m^{2}x^{2}}{x^{2} + m^{2}x^{2}}$$
+\\
+Solving the limit, we get $$\lim_{x\to0} \frac{x^{2} - m^{2}x^{2}}{x^{2} + m^{2}x^{2}} = \frac{1 - m^{2}}{1 + m^{2}}$$
+\\
+In order to define a $f(x,y)$ so as to make it continuous at $(0,0)$, $$\lim_{(x,y)\to(0,0)} \frac{x^{2} - y^{2}}{x^{2} + y^{2}}$$ should be equal along every path $y = mx + c$ taken. Since this is not true in the given function, we cannot define $f(x,y)$ so as to make it continuous at $(0,0)$.
+
+\section{}
+Given a scalar field
+$$f(\textbf{x}) = ||\textbf{x}||^{4}$$
+
+Now, assume that
+
+$$g(t) = f(\textbf{x} + t\textbf{y})$$
+
+Since
+
+$$f(\textbf{x}) = (\textbf{x}\cdot\textbf{x})\times(\textbf{x}\cdot\textbf{x})$$
+
+We get
+
+$$g(t) = (\textbf{x} + t\textbf{y})\cdot(\textbf{x} + t\textbf{y})\times(\textbf{x} + t\textbf{y})\cdot(\textbf{x} + t\textbf{y})$$
+
+$$g(t) = (\textbf{x}\cdot\textbf{x}+2t\textbf{x}\cdot\textbf{y}+t^{2}\textbf{y}\cdot\textbf{y})\times(\textbf{x}\cdot\textbf{x}+2t\textbf{x}\cdot\textbf{y}+t^{2}\textbf{y}\cdot\textbf{y})$$
+
+$$g\prime(0) = f\prime(\textbf{x};\textbf{y}) = 4||\textbf{x}||^{2}(\textbf{x}\cdot\textbf{y})$$
+
+\section{}
+\subsection{}
+
+Given that
+
+$$f(x,y) = \frac{x}{\sqrt{x^{2} + y^{2}}}$$
+
+Then the first order partial derivative can be calculated as
+
+$$\frac{\partial f}{\partial x} = \frac{\partial \frac{x}{\sqrt{x^{2} + y^{2}}}}{\partial x}$$
+
+Using division rule, we get
+
+$$\frac{\partial f}{\partial x} = \frac{\frac{\partial \:}{\partial \:x}\left(x\right)\sqrt{x^2+y^2}-\frac{\partial \:}{\partial \:x}\left(\sqrt{x^2+y^2}\right)x}{\left(\sqrt{x^2+y^2}\right)^2}$$
+
+$$\frac{\partial f}{\partial x} = \frac{1\cdot \sqrt{x^2+y^2}-\frac{x}{\sqrt{x^2+y^2}}x}{\left(\sqrt{x^2+y^2}\right)^2} = \frac{y^2}{\left(x^2+y^2\right)\sqrt{x^2+y^2}}$$
+
+The partial derivative with respect to y is
+
+$$\frac{\partial f}{\partial y} = \frac{\partial \frac{x}{\sqrt{x^{2} + y^{2}}}}{\partial y}$$
+
+$$\frac{\partial f}{\partial y} = x\frac{\partial \:}{\partial \:y}\left(\left(x^2+y^2\right)^{-\frac{1}{2}}\right)$$
+
+And using chain rule, replacing $u = x^{2} + y^{2}$, we get
+
+$$\frac{\partial f}{\partial y} = x\frac{\partial \:}{\partial \:u}\left(u^{-\frac{1}{2}}\right)\frac{\partial \:}{\partial \:y}\left(x^2+y^2\right)$$
+
+$$\frac{\partial f}{\partial y} = x\left(-\frac{1}{2u^{\frac{3}{2}}}\right)\cdot \:2y$$
+
+Replacing the back the value of $u$, we get
+
+$$\frac{\partial f}{\partial y} = -\frac{xy}{\left(x^2+y^2\right)^{\frac{3}{2}}}$$
+
+\subsection{}
+
+Given $$f(x) = \vec{a}.\vec{x}$$
+
+$\vec{a}$ being fixed, $f$ is defined on $R^{n}$ and $\vec{a} = a_{1}i + a_{2}j + ...$
+
+Then, the partial derivative in the $x$ direction is
+
+$$\frac{\partial f}{\partial x} = \lim_{h\to0}\frac{f((x,y,z...) + h(1,0,0,0...)) - f(x,y,z...)}{h}$$
+
+$$= \lim_{h\to0}\frac{\vec{a}\cdot(x+h,y,z..) - \vec{a}\cdot(x,y,z...)}{h}$$
+
+$$= a_{1}$$
+
+Then, the partial derivative in the $y$ direction is
+
+$$\frac{\partial f}{\partial y} = \lim_{h\to0}\frac{f((x,y,z...) + h(0,1,0,0...)) - f(x,y,z...)}{h}$$
+
+$$= \lim_{h\to0}\frac{\vec{a}\cdot(x,y+h,z..) - \vec{a}\cdot(x,y,z...)}{h}$$
+
+$$= a_{2}$$
+
+And so on.
+
+
+\section{}
+
+Given the function $$f(x,y) = \frac{1}{y}\cos{x^{2}}$$
+
+We have $$D_{2}f = \frac{\partial \frac{1}{y}\cos{x^{2}}}{\partial y} = \frac{-1}{y^{2}}\cos{x^{2}}$$ $$D_{1}f = \frac{\partial \frac{1}{y}\cos{x^{2}}}{\partial x} = \frac{-2x}{y}\sin{x^{2}}$$
+
+Then, the mixed partial derivatives $D_{1}(D_{2}f)$ and $D_{2}(D_{1}f)$ are given by
+$$D_{1}(D_{2}f) = \frac{2x}{y^{2}}\sin{x^{2}}$$
+
+$$D_{2}(D_{1}f) = \frac{2x}{y^{2}}\sin{x^{2}}$$
+
+Since $D_{1}(D_{2}f) = D_{2}(D_{1}f)$ for all values of $(x,y)$
+\\
+Hence, Proved
+
+\section{}
+
+Given the scalar field $$f(x,y,z) = x^{2} + 2y^{2} + 3z^{2}$$
+
+and the unit vector $\frac{i - j + 2k}{\sqrt{6}}$
+
+The directional derivative at $(1, 1, 0)$ in the direction of $\vec{v} = i - j + 2k$ equals to
+
+$$DD = f((1,1,0);(\frac{1}{\sqrt{6}}, \frac{-1}{\sqrt{6}}, \frac{2}{\sqrt{6}})) = \lim_{h\to0}\frac{f((1,1,0) + h(\frac{1}{\sqrt{6}}, \frac{-1}{\sqrt{6}}, \frac{2}{\sqrt{6}})) - f(1,1,0)}{h}$$
+
+$$= \lim_{h\to0}\frac{\frac{(h + \sqrt{6})^{2}}{6} + \frac{(-h + \sqrt{6})^{2}}{6} + \frac{12h^{2}}{6} - 3}{h}$$
+
+Applying L' Hopitals rule, we get
+
+$$\lim_{h\to0}\frac{15h^{2} - 2\sqrt{6}h}{6h} = \frac{-2}{\sqrt{6}}$$
+
+
+
+\section{}
+
+Given the scalar field $$f(x,y,z) = axy^{2} + byz + cz^{2}x^{3}$$
+  has a maximum value of 64 in a direction parallel
+to the z -axis.
+
+The directional derivative at $(1, 2, −1)$ in the direction parallel to the $z$ axis being $\vec{v} = k$ equals to
+
+$${\Big(\frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j + \frac{\partial f}{\partial z}k}\Big)\cdot\big({k}\big)$$
+
+Replacing values, we get
+
+$$\Big((ay^{2} + 3cz^{2}x{2})i + (2axy + bz)j + (by + 2czx^{3})k\Big)\cdot\big({k}\big)$$
+
+where $(x,y,z) \rightarrow (0,0,1)$, we get
+
+$$\Big((4a + 3c)i + (4a - b)j + (2b - 2c)k\Big)\cdot\big({k}\big) = \big(\frac{2b - 2c}{\sqrt{1}}\big) = 64$$
+
+Hence, we get 
+
+$$b - c = 32$$
+\\
+\\
+If maximum occurs along a direction, then the minimum occurs along a direction perpendicular to it.
+
+$$4a + 3c = 0$$
+$$4a - b = 0$$
+
+Solving these equations, we get
+
+$$a = 6, b = 24, c = -8$$
+
+
+
+\section{}
+
+Given 
+$$\textbf{r}(x,y,z) = xi + yj + zk$$ and $$r(x,y,z) = ||\textbf{r}(x,y,z)|| = \sqrt{x^{2} + y^{2} + z^{2}}$$
+
+Also 
+$$r^{n} = \sqrt[n/2]{x^{2} + y^{2} + z^{2}}$$
+
+Computing for some value $n$, a positive integer, the gradient of $r^{n}$
+
+$$ \nabla(r^{n}) = \Big(\frac{\partial r^{n}}{\partial x}i + \frac{\partial r^{n}}{\partial y}j + \frac{\partial r^{n}}{\partial z}k\Big)$$
+
+$$\nabla(r^{n}) = \Big(\frac{2nx\sqrt[(n-2)/2]{x^{2} + y^{2} + z^{2}}}{2}i + \frac{2ny\sqrt[(n-2)/2]{x^{2} + y^{2} + z^{2}}}{2}j + \frac{2nz\sqrt[(n-2)/2]{x^{2} + y^{2} + z^{2}}}{2}k\Big)$$
+
+$$\nabla(r^{n}) = \Big(nx\sqrt[(n-2)/2]{x^{2} + y^{2} + z^{2}}i + ny\sqrt[(n-2)/2]{x^{2} + y^{2} + z^{2}}j + nz\sqrt[(n-2)/2]{x^{2} + y^{2} + z^{2}}k\Big)$$
+
+$$\nabla(r^{n}) = \Big(n\sqrt[(n-2)/2]{x^{2} + y^{2} + z^{2}}\Big)\times\Big(xi + yj + zk\Big)$$
+
+$$\nabla(r^{n}) = \Big(nr^{n-2}\Big)\times\Big(xi + yj + zk\Big)$$
+
+$$\nabla(r^{n}) = nr^{n-2}\textbf{r}$$
+
+\section{}
+
+Given a function $u = f(x,y)$, $x = X(t)$, $y = Y(t)$ define $u$ as a function of $t$, say $u = F(t)$
+
+\subsection{}
+
+Given $$f(x,y) = x^{2} + y^{2} , X(t) = t, Y(t) = t^{2}$$
+
+Replacing the given values of $(x,y)$ as $(X(t),Y(t))$, we get
+
+$$u(t) = t^{2} + t^{4}$$
+
+$F\prime(t)$ can be calculated as
+
+$$F\prime(t) = \frac{du(t)}{dt}$$
+
+$$F\prime(t) = \frac{d(t^{2} + t^{4})}{dt}$$
+
+$$F\prime(t) = 2t + 4t^{3}$$
+
+$F\prime\prime(t)$ can be calculated as
+
+$$F\prime\prime(t) = \frac{dF\prime(t)}{dt}$$
+
+$$F\prime\prime(t) = \frac{d(2t + 4t^{3})}{dt}$$
+
+$$F\prime\prime(t) = 2 + 12t^{2}$$
+
+\subsection{}
+
+Given $$f(x,y) = e^{xy}\cos(xy^{2}), X(t) = \cos(t), Y(t) = \sin(t)$$
+
+Replacing the given values of $(x,y)$ as $(X(t),Y(t))$, we get
+
+$$u(t) = e^{\cos(t)\sin(t)}\cos(\cos(t)(\sin(t))^{2})$$
+
+$F\prime(t)$ can be calculated as
+
+$$F\prime(t) = \frac{du(t)}{dt}$$
+
+$$F\prime(t) = \frac{d(e^{\cos(t)\sin(t)}\cos(\cos(t)(\sin(t))^{2}))}{dt}$$
+
+Have to add.
+
+\section{}
+See appended section 
+\section{}
+See appended section
+\section{}
+See appended section
+\section{}
+See appended section
+\section{}
+See appended section
+\section{}
+See appended section
+\section{}
+See appended section
+\section{}
+
+\subsection{}
+
+Given $$f(x,y,z) = (y^{2} − z^{2})i + 2yzj − x^{2}k$$
+
+along the path described by $\alpha(t) = ti + t^{2}j + t^{3}k$
+\\
+\\
+The line integral of the vector field is
+
+$$\int{f(\alpha(t))}\cdot{d\alpha} = \int {((t^{4} − t^{6})i + 2t^{5}j − t^{2}k)}\cdot{(i + 2tj + 3t^{2}k)}dt$$
+
+$$= \int{(t^{4} - t^{6}) + 4t^{6} - 3t^{4}}dt$$
+
+$$= \Big(\frac{-2t^{5}}{5} + \frac{3t^{7}}{7}\Big)$$
+
+\subsection{}
+
+See appended section
+
+\section{}
+
+\subsection{}
+
+Given $$\int_{C}(x^{2} - 2xy)dx + (y^{2} - 2xy)dy$$
+
+where $C$ is a path from $(−2,4)$ to $(1,1)$ along the parabola $C$ $y = x^{2}$.
+\\
+\\
+The parametric equation of the curve is $x = t$ and $y = t^{2}$, then the line integral is
+
+$$= \int_{-2}^{1}(t^{2} - 2t^{3})dt + 2(t^{5} - 2t^{4})dt$$
+
+$$= \int_{-2}^{1}(t^{2} - 2t^{3} + 2t^{5} - 4t^{4})dt$$
+
+$$= \Big(\frac{t^{3}}{3} - \frac{t^{4}}{2} + \frac{t^{6}}{3} - \frac{4t^{5}}{5}\Big)_{-2}^{1}$$
+
+$$= \frac{396}{10}$$
+
+\subsection{}
+
+Given $$\int_{C}\frac{(x+y)dx - (x-y)dy}{x^{2} + y^{2}}$$
+
+where $C$ is is the circle $x^{2} + y^{2} = a^{2}$ traversed once in a counter-clockwise direction.
+\\
+\\
+The parametric equation of the curve is $x = a\cos{t}$ and $y = a\sin{t}$, then the line integral is
+
+$$= \int_{0}^{2\pi}\frac{-a\sin{t}(\cos{t}+\sin{t})dt - a\cos{t}(\cos{t}-\sin{t})dt}{a^{2}({\cos{t}}^{2} + {\sin{t}}^{2})}$$
+
+$$= \int_{0}^{2\pi}\frac{-a({\sin{t}}^{2} + {\cos{t}}^{2})dt}{a^{2}}$$
+
+$$= \int_{0}^{2\pi}\frac{-dt}{a}$$
+
+$$= \int_{0}^{2\pi}\frac{-dt}{a}$$
+
+$$= \Big(\frac{-t}{a}\Big)_{0}^{2\pi}$$
+
+$$= \frac{-2\pi}{a}$$
+\section{}
+\subsection{}
+Given the vector field $$f(x, y) = (2xe^{y} + y)i + (x^{2}e^{y} + x − 2y)j$$
+
+We have $$f_{1}(x,y) = 2xe^{y} + y$$ and $$f_{2}(x,y) = x^{2}e^{y} + x − 2y$$
+
+Then, the partial derivatives $D_{2}f_{1}$ and $D_{1}f_{2}$ are given by
+$$D_{2}f_{1} = 2xe^{y} + 1$$
+
+and
+
+$$D_{1}f_{2} = 2xe^{y} + 1$$
+
+Since $D_{2}f_{1} = D_{1}f_{2}$ for all values of $(x,y)$, this vector field is a gradient on any open subset of $R^{2}$.
+\\
+We know that $$\frac{\partial \phi}{\partial x} = 2xe^{y} + 1$$ and $$\frac{\partial \phi}{\partial y} = 2xe^{y} + 1$$ 
+
+Using indefinite integrals and integrating the first of these equations with respect to x (holding y constant) we find
+
+$$\phi(x,y) = \int(2xe^{y} + 1)dx + A(y) = x^{2}e^{y} + x + A(y)$$
+
+and
+
+$$\phi(x,y) = \int(2xe^{y} + 1)dy + B(x) = 2xe^{y} + y + B(x)$$
+
+\subsection{}
+
+Given the vector field $$f(x,y,z) = 2xy^{3}i + x^{2}z^{3}j + 3x^{2}yz^{2}k$$
+
+We have $$f_{1}(x,y) = 2xy^{3}$$ $$f_{2}(x,z) = x^{2}z^{3}$$ $$f_{3}(x,y,z) = 3x^{2}yz^{2}$$
+
+Then, the partial derivatives $D_{3}f_{1}$, $D_{2}f_{2}$ and $D_{1}f_{3}$ are given by
+$$D_{3}f_{1} = 0$$
+
+$$D_{2}f_{2} = 0$$
+
+$$D_{1}f_{3} = 6xyz^{2}$$
+
+Since $D_{3}f_{1} = D_{2}f_{2} = D_{1}f_{3}$ only when either $x, y$ or $z$ is equal to $0$
+
+Hence, this vector is not a gradient of a scalar field $\phi$
+
+\newpage
+
+\section{Appendix}
+
+Due to time constrains, I haven't been able to type all the solutions for the assignments in LaTeX. The answers that refer to this section are in the other document.
+
+\end{document}
