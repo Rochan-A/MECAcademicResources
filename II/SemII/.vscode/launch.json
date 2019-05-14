@@ -1,0 +1,28 @@
+{
+	"configurations": [
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - calc",
+			"request": "launch",
+			"mainClass": "calc"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - A",
+			"request": "launch",
+			"mainClass": "A"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - string",
+			"request": "launch",
+			"mainClass": "string"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - ExcepTest",
+			"request": "launch",
+			"mainClass": "ExcepTest"
+		}
+	]
+}
